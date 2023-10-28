@@ -5,10 +5,10 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className={styles['App']}>
-      <h1 className={styles['app-heading']}>Vite + React + TS + Tailwind</h1>
+    <div className={''}>
+      <h1 className={'text-2xl'}>Vite + React + TS + Tailwind</h1>
       <div>
-        <button className={styles['button']} onClick={() => setCount((count) => count + 1)}>
+        <button className={'outline'} onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
         <p>
