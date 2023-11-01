@@ -57,15 +57,21 @@ function App() {
 
   return (
     <>
-      <div className={'flex gap-4 flex-col m-4'}>
-        <h1 className={'text-2xl font-mono text-green-600 bg-black p-4 w-fit'}>Encrypt</h1>
-        <div className="w-full p-4 bg-black text-green-600 flex gap-2 md:w-1/2 flex-col">
+      <div className="w-full h-screen bg-[url('public/matrix-code-numbers-green1.jpg')] -z-40 top-0 left-0 absolute" />
+      <div>
+        <h2 className={'flex items-center justify-center text-3xl font-mono text-lime-400 bg-black p-4 w-full'}>
+          Message Masher
+        </h2>
+      </div>
+      <div className={'flex items-center justify-center gap-4 flex-col m-4 h-screen'}>
+        <h2 className={'text-2xl font-mono text-lime-400 bg-black p-4 w-fit'}>Encrypt</h2>
+        <div className="p-4 bg-black text-lime-400 flex gap-2 w-1/4 flex-col">
           <div className="flex flex-row gap-2">
             <p className="text-green-800">{'>'}</p>
             <input
               onChange={(pete) => encryptUserInput(pete.currentTarget.value)}
               placeholder="..."
-              className="bg-black text-green-600 placeholder-green-600 w-full"
+              className="bg-black text-lime-400 placeholder-green-600 w-full"
             />
           </div>
           <div className="flex flex-row gap-2">
@@ -73,18 +79,14 @@ function App() {
             <p>{encrypt(userInput1)}</p>
           </div>
         </div>
-      </div>
-      <div className="w-full h-screen bg-green-900 absolute -z-40 top-0 left-0" />
-
-      <div className={'flex gap-4 flex-col m-4'}>
-        <h1 className={'text-2xl font-mono text-green-600 bg-black p-4 w-fit'}>Decrypt</h1>
-        <div className="w-full p-4 bg-black text-green-600 flex gap-2 md:w-1/2 flex-col">
+        <h2 className={'text-2xl font-mono text-lime-400 bg-black p-4 w-fit'}>Decrypt</h2>
+        <div className="p-4 bg-black text-lime-400 flex gap-2 w-1/4 flex-col">
           <div className="flex flex-row gap-2">
             <p className="text-green-800">{'>'}</p>
             <input
               onChange={(decrypt) => decryptUserInput(decrypt.currentTarget.value)}
               placeholder="..."
-              className="bg-black text-green-600 placeholder-green-600 w-full"
+              className="bg-black text-lime-400 placeholder-green-600 w-full"
             />
           </div>
           <div className="flex flex-row gap-2">
@@ -93,7 +95,6 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="w-full h-screen bg-green-900 absolute -z-40 top-0 left-0" />
     </>
   );
 }
