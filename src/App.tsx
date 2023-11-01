@@ -57,13 +57,12 @@ function App() {
 
   return (
     <>
-      <div className="w-full h-screen bg-[url('public/matrix-code-numbers-green1.jpg')] -z-40 top-0 left-0 absolute" />
       <div>
-        <h2 className={'flex items-center justify-center text-3xl font-mono text-lime-400 bg-black p-4 w-full'}>
+        <h2 className={'flex justify-center text-3xl font-mono text-lime-400 bg-black p-4 w-full fixed'}>
           Message Masher
         </h2>
       </div>
-      <div className={'flex items-center justify-center gap-4 flex-col m-4 h-screen'}>
+      <div className={'flex items-center justify-center gap-4 flex-col h-screen '}>
         <h2 className={'text-2xl font-mono text-lime-400 bg-black p-4 w-fit'}>Encrypt</h2>
         <div className="p-4 bg-black text-lime-400 flex gap-2 w-1/4 flex-col">
           <div className="flex flex-row gap-2">
