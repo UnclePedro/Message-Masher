@@ -1,12 +1,12 @@
-# Vite React Typescript Tailwind Template
+# Message Masher - A simple message encrypter and decrypter.
 
-<p align="center">
-    <img src="./public/vite-logo.png" width="240" height="240" alt="vite">
-    <br>
-    <br>
-</p>
+Want to speak in code to your friends? My text encrypter has you covered.
+This started off as a project from Codecademy to learn about classes, and it's developed into a React/Typescript webpage to showcase a message encrypter.
 
-This template has been configured with all of the tools required to create a React Application using **TypeScript** and **TailwindCSS** with Vite.
+### How to Use
+
+You can type a message into the 'encrypt' field and receive a scrambled message to send to your friend. 
+The receiver can then paste the scrambled message into the 'decrypter' and read it.
 
 ## Technologies
 
@@ -26,42 +26,3 @@ This template has been configured with all of the tools required to create a Rea
 - [Vitest](https://vitest.dev/) for unit testing and code coverage
 - [Vite](https://vitejs.dev/) to build the project for development or production
 - [Husky 🐶](https://typicode.github.io/husky/) runs the full list of specs before committing your changes to ensure that you have a green build
-
-## Development
-
-### Setup
-
-1. `git clone https://github.com/nrabhiram/vite-react-ts-tailwind-template.git`
-2. Run `npm install` to install all of the project's dependencies
-3. Build the project for production: `npm run build`
-4. Run the local development server: `npm run dev`
-
-### Tailwind + CSS Modules
-
-1. Create a CSS Module file by following the naming convention - `<Component>.module.css`
-2. Use the `@apply` directive in your CSS class definitions to use Tailwind's utility classes into your own custom CSS
-    
-    ```css
-    .app-heading {
-        @apply text-5xl font-semibold mb-4;
-    }
-    ```
-3. Import the CSS Module file into the React component file
-
-### Dev Loop
-
-- `prettier-format` - run the autoformatter
-- `lint` - run the linter
-- `test` - run the specs
-- `test-filter <spec-name>` - run a specific spec
-- `coverage` - get a coverage report of the specs
-- `build` - build the project files for distribution
-- `dev` - run the local development server
-
-## Contributing
-
-Feel free to [open an issue](https://github.com/nrabhiram/vite-react-ts-tailwind-template/issues/new) or create a PR if you'd like to contribute 🙌
-
-## License
-
-The project is available as open source under the terms of the [MIT License](LICENSE).
