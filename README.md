@@ -1,4 +1,4 @@
-# Message Masher - A simple message encrypter and decrypted.
+# Message Masher - A simple message encrypter and decrypter.
 
 Want to speak in code to your friends? My text encrypter has you covered.
 This started off as a project from Codecademy to learn about classes, and it's developed into a React/Typescript webpage to showcase a message encrypter.
