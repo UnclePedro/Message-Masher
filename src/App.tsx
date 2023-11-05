@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { decrypt, encrypt } from './helpers/encryption';
-//import TextLineFormat from './components/textLineFormat';
+import { InputSection } from './components/InputSection';
 
 function App() {
-  const [userInput1, encryptUserInput] = useState('');
-  const [userInput2, decryptUserInput] = useState('');
+  const [encryptUserInput, setEncryptUserInput] = useState('');
+  const [decryptUserInput, setDecryptUserInput] = useState('');
 
   return (
     <>
@@ -14,36 +14,16 @@ function App() {
         </h2>
       </div>
       <div className={'flex items-center justify-center gap-4 flex-col h-screen '}>
-        <h2 className={'text-2xl font-mono text-lime-400 bg-black p-4 w-fit'}>Encrypt</h2>
-        <div className="p-4 bg-black text-lime-400 flex gap-2 w-1/4 flex-col">
-          <div className="flex flex-row gap-2">
-            <p className="text-green-800">{'>'}</p>
-            <input
-              onChange={(pete) => encryptUserInput(pete.currentTarget.value)}
-              placeholder="..."
-              className="bg-black text-lime-400 placeholder-green-600 w-full"
-            />
-          </div>
-          <div className="flex flex-row gap-2">
-            <p className="text-green-800">{'>'}</p>
-            <p>{encrypt(userInput1)}</p>
-          </div>
-        </div>
-        <h2 className={'text-2xl font-mono text-lime-400 bg-black p-4 w-fit'}>Decrypt</h2>
-        <div className="p-4 bg-black text-lime-400 flex gap-2 w-1/4 flex-col">
-          <div className="flex flex-row gap-2">
-            <p className="text-green-800">{'>'}</p>
-            <input
-              onChange={(decrypt) => decryptUserInput(decrypt.currentTarget.value)}
-              placeholder="..."
-              className="bg-black text-lime-400 placeholder-green-600 w-full"
-            />
-          </div>
-          <div className="flex flex-row gap-2">
-            <p className="text-green-800">{'>'}</p>
-            <p>{decrypt(userInput2)}</p>
-          </div>
-        </div>
+        <InputSection
+          title="Encrypt"
+          output={encrypt(encryptUserInput)}
+          onChange={(updatedInput) => setEncryptUserInput(updatedInput)}
+        />
+        <InputSection
+          title="Decrypt"
+          output={decrypt(decryptUserInput)}
+          onChange={(updatedInput) => setDecryptUserInput(updatedInput)}
+        />
       </div>
     </>
   );
