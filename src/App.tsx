@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { decrypt, encrypt } from './helpers/encryption';
 import { InputSection } from './components/InputSection';
+//import { getQuote } from './components/QuoteGenerator';
 
 function App() {
   const [encryptUserInput, setEncryptUserInput] = useState('');
