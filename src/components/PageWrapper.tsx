@@ -8,9 +8,7 @@ interface Props {
 const PageWrapper = ({ children }: Props) => {
   return (
     <>
-      <div>
-        <Banner />
-      </div>
+      <Banner />
       <div className={'flex items-center justify-center gap-4 flex-col h-screen'}>{children}</div>
     </>
   );
