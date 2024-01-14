@@ -4,7 +4,7 @@ interface Props {
   output: string;
 }
 
-export const InputSection = ({ onChange, title, output }: Props) => {
+const InputSection = ({ onChange, title, output }: Props) => {
   return (
     <>
       <h2 className={'text-2xl font-mono text-lime-400 bg-black p-4 w-fit'}>{title}</h2>
@@ -25,3 +25,5 @@ export const InputSection = ({ onChange, title, output }: Props) => {
     </>
   );
 };
+
+export default InputSection;
