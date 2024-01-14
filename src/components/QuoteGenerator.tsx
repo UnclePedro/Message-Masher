@@ -9,18 +9,19 @@ export const getQuote = async ({ title, output }: Quote) => {
   const response = await fetch('https://api.api-ninjas.com/v1/quotes?category=computers', {
     headers: { 'X-Api-Key': '8yIzgCc4+Yky9kfbdJAUSg==cxYK7TTNGPo1WAoe' },
   });
-  const quote: Quote[0] = await response.json();
+  const quotes: Quote[0] = await response.json();
+  const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
   return (
     <>
       <button
         className="text-white"
         onClick={async () => {
-          const quote = await getQuote();
+          const quotes = await getQuote();
         }}
       >
-        {quote}
+        {randomQuote}
       </button>
-      <p className="text-white">{quote}</p>
+      <p className="text-white">{randomQuote}</p>
     </>
   );
 };
