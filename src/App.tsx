@@ -1,32 +1,19 @@
-import { useState } from 'react';
-import { decrypt, encrypt } from './helpers/encryption';
-import { InputSection } from './components/InputSection';
+import Dashboard from './screens/Dashboard';
+import EncryptPage from './screens/EncryptPage';
+import DecryptPage from './screens/DecryptPage';
+import PageWrapper from './components/PageWrapper';
+import { ReactNode } from 'react';
 
 function App() {
-  const [encryptUserInput, setEncryptUserInput] = useState('');
-  const [decryptUserInput, setDecryptUserInput] = useState('');
+  // Return the relevant screen based on the path
+  const renderScreen = (): ReactNode => {
+    const pathname = window.location.pathname;
+    if (pathname === '/encrypt') return <EncryptPage />;
+    if (pathname === '/decrypt') return <DecryptPage />;
+    return <Dashboard />;
+  };
 
-  return (
-    <>
-      <div>
-        <h2 className={'flex justify-center text-3xl font-mono text-lime-400 bg-black p-4 w-full fixed'}>
-          Message Masher
-        </h2>
-      </div>
-      <div className={'flex items-center justify-center gap-4 flex-col h-screen '}>
-        <InputSection
-          title="Encrypt"
-          output={encrypt(encryptUserInput)}
-          onChange={(updatedInput) => setEncryptUserInput(updatedInput)}
-        />
-        <InputSection
-          title="Decrypt"
-          output={decrypt(decryptUserInput)}
-          onChange={(updatedInput) => setDecryptUserInput(updatedInput)}
-        />
-      </div>
-    </>
-  );
+  return <PageWrapper>{renderScreen()}</PageWrapper>;
 }
 
 export default App;
